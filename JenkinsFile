@@ -20,6 +20,7 @@ pipeline {
                         subject: "Unit tests successful.",
                         body: "Unit tests log is attached.",
                         attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/unitTestsLog.log"
+                    )
                 }
 
                 failure{
