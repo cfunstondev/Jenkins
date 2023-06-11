@@ -19,8 +19,8 @@ pipeline {
                         to: "cfunstondev@gmail.com",
                         subject: "Unit tests successful.",
                         body: "Unit tests log is attached.",
-                        attachLog: true,
-                        compressLog: true
+                        // attachLog: true,
+                        // compressLog: true
                     )
                 }
 
