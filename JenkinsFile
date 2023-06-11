@@ -16,15 +16,15 @@ pipeline {
             post{
                 success{
                     mail to: "cfunstondev@gmail.com",
-                    subject: "Unit tests successful."
-                    body: "Unit tests log is attached."
+                    subject: "Unit tests successful.",
+                    body: "Unit tests log is attached.",
                     attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/unitTestsLog.log"
                 }
 
                 failure{
                     mail to: "cfunstondev@gmail.com",
-                    subject: "Unit tests failed."
-                    body: "Unit tests log is attached."
+                    subject: "Unit tests failed.",
+                    body: "Unit tests log is attached.",
                     attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/unitTestsLog.log"
                 }
             }
@@ -44,15 +44,15 @@ pipeline {
             post{
                 success{
                     mail to: "cfunstondev@gmail.com",
-                    subject: "Security scan successful."
-                    body: "Security log is attached."
+                    subject: "Security scan successful.",
+                    body: "Security log is attached.",
                     attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/securityLog.log"
                 }
 
                 failure{
                     mail to: "cfunstondev@gmail.com",
-                    subject: "Security scan failed."
-                    body: "Security log is attached."
+                    subject: "Security scan failed.",
+                    body: "Security log is attached.",
                     attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/securityLog.log"
                 }
             }
@@ -72,15 +72,15 @@ pipeline {
             post{
                 success{
                     mail to: "cfunstondev@gmail.com",
-                    subject: "Integration tests successful."
-                    body: "Integration tests log is attached."
+                    subject: "Integration tests successful.",
+                    body: "Integration tests log is attached.",
                     attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/integrationTestsLog.log"
                 }
 
                 failure{
                     mail to: "cfunstondev@gmail.com",
-                    subject: "Integration tests failed."
-                    body: "Integration tests log is attached."
+                    subject: "Integration tests failed.",
+                    body: "Integration tests log is attached.",
                     attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/integrationTestsLog.log"
                 }
             }
