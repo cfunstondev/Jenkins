@@ -25,10 +25,13 @@ pipeline {
                 }
 
                 failure{
-                    mail to: "cfunstondev@gmail.com",
-                    subject: "Unit tests failed.",
-                    body: "Unit tests log is attached.",
-                    attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/unitTestsLog.log"
+                    emailext (
+                        to: "cfunstondev@gmail.com",
+                        subject: "Unit tests failed.",
+                        body: "Unit tests log is attached.",
+                        attachLog: true,
+                        compressLog: true
+                    )
                 }
             }
         }
@@ -46,17 +49,23 @@ pipeline {
 
             post{
                 success{
-                    mail to: "cfunstondev@gmail.com",
-                    subject: "Security scan successful.",
-                    body: "Security log is attached.",
-                    attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/securityLog.log"
+                    emailext (
+                        to: "cfunstondev@gmail.com",
+                        subject: "Security Scan successful.",
+                        body: "Security Scan log is attached.",
+                        attachLog: true,
+                        compressLog: true
+                    )
                 }
 
                 failure{
-                    mail to: "cfunstondev@gmail.com",
-                    subject: "Security scan failed.",
-                    body: "Security log is attached.",
-                    attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/securityLog.log"
+                    emailext (
+                        to: "cfunstondev@gmail.com",
+                        subject: "Security Scan failed.",
+                        body: "Security Scan log is attached.",
+                        attachLog: true,
+                        compressLog: true
+                    )
                 }
             }
         }
@@ -74,17 +83,23 @@ pipeline {
 
             post{
                 success{
-                    mail to: "cfunstondev@gmail.com",
-                    subject: "Integration tests successful.",
-                    body: "Integration tests log is attached.",
-                    attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/integrationTestsLog.log"
+                    emailext (
+                        to: "cfunstondev@gmail.com",
+                        subject: "Integration Testing successful.",
+                        body: "Integration Testing log is attached.",
+                        attachLog: true,
+                        compressLog: true
+                    )
                 }
 
                 failure{
-                    mail to: "cfunstondev@gmail.com",
-                    subject: "Integration tests failed.",
-                    body: "Integration tests log is attached.",
-                    attachmentsPattern: "/Users/codeyfunston/OneDrive/deakin/it/jenkFinal/integrationTestsLog.log"
+                    emailext (
+                        to: "cfunstondev@gmail.com",
+                        subject: "Integration Testing failure.",
+                        body: "Integration Testing log is attached.",
+                        attachLog: true,
+                        compressLog: true
+                    )
                 }
             }
         }
