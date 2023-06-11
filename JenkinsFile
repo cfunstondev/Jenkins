@@ -91,4 +91,5 @@ pipeline {
                 echo "Deploying to Google Compute Engine production instance with Windows Server."
             }
         }
+    }
 }
