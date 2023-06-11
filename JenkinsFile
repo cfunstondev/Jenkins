@@ -15,11 +15,13 @@ pipeline {
 
             post{
                 success{
-                    emailext body: "Unit tests log is attached.",
+                    emailext (
+                        to: 'cfunstondev@gmail.com',
                         subject: "Unit tests successful.",
-                        to: 'cfunstondev@gmail.com'
+                        body: "Unit tests log is attached.",
                         attachLog: true,
                         compressLog: true
+                    )
                 }
 
                 failure{
